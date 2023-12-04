@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "db-streamdash"
+version = "0.1.0"
+description = "Projeto de Banco de dados do StreamDash"
+authors = ["Gabriel Ronchi Brigido <gabrielbrigido1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+mkdocs = "^1.5.3"
+commitizen = "^3.12.0"
+taskipy = "^1.12.2"
+pytest = "^7.4.3"
+pydantic = "^2.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

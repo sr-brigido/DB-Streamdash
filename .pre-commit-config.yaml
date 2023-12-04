@@ -1,0 +1,44 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-toml
+      - id: detect-private-key
+
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.10.1
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.3.0 # Modify this to be the version you want
+    hooks:
+      - id: pydocstyle
+
+  - repo: https://github.com/pycqa/flake8
+    rev: '045f297f89a4d6b7f1bb6dc6e62f6eb506aec320'
+    hooks:
+      - id: flake8
+        exclude: ^tests/
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: 3.12.0
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: '6b2e24722bdcc40ea37c3bc155b6856961763814'
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml"]
